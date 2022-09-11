@@ -169,13 +169,23 @@ import statistics
 # _df = _df.reindex([i.lstrip("user_") for i in _df.columns], axis=1)
 # print(_df)
 
-lst = [5, 4, 20, 4, 2, 7, 6, 4]
-print(sorted(lst))
-print(sum(lst)/len(lst))
-print(np.median(lst))
-# print(np.mod(lst))
+# lst = [5, 4, 20, 4, 2, 7, 6, 4]
+# print(sorted(lst))
+# print(sum(lst)/len(lst))
+# print(np.median(lst))
+# # print(np.mod(lst))
+#
+# print("xxxxxxxxxx")
+# print(statistics.mean(lst))
+# print(statistics.median(lst))
+# print(statistics.mode(lst))
 
-print("xxxxxxxxxx")
-print(statistics.mean(lst))
-print(statistics.median(lst))
-print(statistics.mode(lst))
+# d = {"col1": {"a": 10, "b": 20, "c": 30, "d": 40}}
+# df1 = pd.DataFrame(d)
+
+df1 = pd.DataFrame([[10, 2, 8], [20, 11, 1], [30, 23, 4], [40, 4, 5]], index=["a", "b", "c", "d"],
+                   columns=["col1", "col2", "col3"])
+
+df2 = df1.T
+# print(df1 + df2)
+print(df1.add(df2, fill_value=0))
