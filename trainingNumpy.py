@@ -112,13 +112,26 @@ import numpy as np
 # lst.sort(reverse=True)
 # print(lst)
 
-arr = np.array([670.99, 540.50, 799.01])
-mask = (arr % 1 * 100).astype(int) == 99
-print(mask.astype("int32"))
-print(mask)
+# arr = np.array([670.99, 540.50, 799.01])
+# mask = (arr % 1 * 100).astype(int) == 99
+# print(mask.astype("int32"))
+# print(mask)
+#
+# print(int(670.99 % 1 * 100) == 99)
+#
+# print(math.floor(670.99))
+# print(round(670.99 % 1 * 100))
+# print(type(arr))
 
-print(int(670.99 % 1 * 100) == 99)
+# Z = np.array([1, 5, 6, 7, 0, 11])
+# M = np.array([i for i in range(len(Z)) if Z[i] != 0])
+# print(M)
+# print(np.where(Z != 0))
 
-print(math.floor(670.99))
-print(round(670.99 % 1 * 100))
-print(type(arr))
+m1 = np.zeros((3, 3))
+m1[[0, 1, 2], [0, 1, 2]] = np.ones(3)
+# np.fill_diagonal(m1, 1)
+print(m1)
+
+# Z = np.array([1, 2, 0, 0, 4, 0])
+# print(min(Z), max(Z))
